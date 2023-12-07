@@ -1,0 +1,12 @@
+# Protocol-Specific Functionality
+
+The protocol-specific functionality that should be built into any given adaptor will depend on the set of functionality offered by the protocol. In general, an adaptor will contain "wrapper" functions for each relevant entry/exit point to the underlying protocol. Adaptors should follow the following general best practices:
+
+* Every position that can be entered with an adaptor should be able to be unwound. Adaptors that do not implement any required "withdrawal" functionality increases the risk that a strategist may rebalance into a given position they cannot withdraw from, leading to stuck assets.
+* Any "exit" functionality should take care to keep in mind protocol-specific requirements that may hurt the Cellar's performance. For instance, the AAVE adaptor's withdrawal functionality does not allow withdrawals that would lower the Cellar's health factor into the liquidation range.
+* Adaptors should be purpose-specific, as opposed to protocol-specific. Most effective adaptors will not wrap an entire protocol's functionality, but will only provide access to the subset of functions relevant to position management.
+* Adaptor developers must take care to keep in mind the Cellar's `totalAssets` check and allowed rebalance deviation. Position management functionality and the `balanceOf` implementation must be designed such that funds remain accounted for and do not lead to large swings in accounted-for TVL.
+* Adaptors should specify the underlying protocol's relevant smart contracts in an immutable manner. These address references should be expressed in code, and not in registry-level configuration (see "Adaptor Configuration").
+* Any adaptor call for position management which requires external approval should revoke any leftover approval at the end of its execution flow. The function `revokeApproval` is provided as part of `BaseAdaptor`.
+* For adaptor calls that may withdraw tokens from an underlying protocol, often the underlying protocols allow the caller to decide which address will receive withdrawn funds. Adaptor developers should leverage the `_externalReceiverCheck` function in `BaseAdaptor` to ensure that any received funds conform to the calling Cellar's requirements.
+  * `_externalReceiverCheck` prevents strategists from calling the withdraw function to send funds to their own address during a rebalance. This is also mitigated by Steward software not allowing strategists to call the withdraw function, and by the rebalance deviation check.&#x20;
