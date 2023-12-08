@@ -4,7 +4,7 @@ description: A detailed breakdown of the Cellar.sol contract.
 
 # Cellars (aka ERC 4626 Vaults)
 
-<figure><img src="../../../.gitbook/assets/Sommelier_Protocol_Smart_Contract_Architecture.jpg" alt=""><figcaption><p>High-Level Smart Contract Architecture where One Cellar has Mutliple Adaptor Positions with Multiple Protocols</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Sommelier_Protocol_Smart_Contract_Architecture.jpg" alt=""><figcaption><p>High-Level Smart Contract Architecture where One Cellar has Multiple Adaptor Positions with Multiple Protocols</p></figcaption></figure>
 
 Cellars are the core user-facing smart contract of the Sommelier Cellars protocol. Cellars represent smart vaults that users can deposit into, earning yield and rewards with deposited funds, and withdraw from, based on the actions of the strategist (see ["Roles & Permissions"](../../roles-and-permissions.md) for more info). To make this user-facing functionality possible, Cellars hew close to the [ERC4626 standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/).&#x20;
 
