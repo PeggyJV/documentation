@@ -43,7 +43,7 @@ Any native Cosmos asset on the Sommelier side can be permissionlessly deployed t
 
 #### Validator set updates
 
-The Gravity contracts understands the respective powers of each validator, tied to their Ethereum delegate key, based on information submitted from the Cosmos chain in a valset update. This was initially bootstrapped when the chain was first deployed, and changes any time the delegated power of validators shifts by more than 5%.
+The Gravity contracts understand the respective powers of each validator, tied to their Ethereum delegate key, based on information submitted from the Cosmos chain in a valset update. This was initially bootstrapped when the chain was first deployed, and changes any time the delegated power of validators shifts by more than 5%.
 
 ### Ethereum-to-Cosmos
 
