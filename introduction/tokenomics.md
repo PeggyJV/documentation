@@ -54,8 +54,6 @@ All investor distributions were complete as of August 2023.
 
 [somm1l2scvs2wve6lfz2ujgvrlkrsnw6g68dx6y0ykw](https://www.mintscan.io/sommelier/address/somm1l2scvs2wve6lfz2ujgvrlkrsnw6g68dx6y0ykw)
 
-[somm1l2scvs2wve6lfz2ujgvrlkrsnw6g68dx6y0ykw](https://www.mintscan.io/sommelier/address/somm1l2scvs2wve6lfz2ujgvrlkrsnw6g68dx6y0ykw)
-
 [somm1kv98xapa28s05x5exhupg3gzlfmkwfl32ye45r](https://www.mintscan.io/sommelier/address/somm1kv98xapa28s05x5exhupg3gzlfmkwfl32ye45r)
 
 [somm1kv98xapa28s05x5exhupg3gzlfmkwfl32ye45r](https://www.mintscan.io/sommelier/address/somm1kv98xapa28s05x5exhupg3gzlfmkwfl32ye45r)
