@@ -138,21 +138,15 @@ for aa in active_auctions {
 
 ### Example Auction Story
 
-An auction has started for 10,000 units of TokenA. The most recent **Token Prices** of TokenA and SOMM submitted by governance are the 52 week high of TokenA at (\$1.00 per unit and 52 week low of SOMM at \$0.10. Because of price of SOMM is above \$0.09 at the time of the auction, any bids that purchase TokenA too early in the auction will do so at a loss.
+An auction has started for 10,000 units of TokenA. The most recent **Token Prices** of TokenA and SOMM submitted by governance are the 52 week high of TokenA at \$1.00 per unit and 52 week low of SOMM at \$0.10. Because of price of SOMM is above \$0.09 at the time of the auction, any bids that purchase TokenA too early in the auction will do so at a loss.
 
-Bidder A wants to take as little risk as possible, and that means not holding SOMM for too long to minimize price exposure as well as making sure their bid is relatively early in the auction so they don't get outbid. Bidder A has decided they will be happy with a 2% profit on the 10,000 bridged TokenA that is being auctioned. They decide that they will wait to buy the SOMM on Osmosis until the auction price has is one update away from the price that will fulfill their target profit per unit.
+Bidder A wants to take as little risk as possible, and that means not holding SOMM for too long to minimize price exposure as well as making sure their bid is relatively early in the auction so they don't get outbid. Bidder A has decided they will be happy with a 2% profit on the 10,000 bridged TokenA that is being auctioned. They decide that they will wait to buy the SOMM on Osmosis until the auction price is one update away from the price that will fulfill their target profit per unit.
 
-Bidder B has a similar strategy to Bidder A, also targetting a an profit of 2%. However, Bidder B has taken then risk of holding SOMM earlier so that they can bid quickly.
+Bidder B has a similar strategy to Bidder A, also targetting a profit of 2%. However, Bidder B has taken the risk of holding SOMM earlier so that they can bid quickly.
 
 Neither Bidder A nor B remember to account for a bridge fee or the Ethereum gas price in their profit calculations.
 
 For simplicity, we will assume the market price of SOMM and TokenA remains constant, and that the price of TokenA at the time of the auction is $1. In reality, the bidders would need to monitor these prices in real time for accurate profit estimates.
-
-($0.20 per SOMM) * (6 SOMM per TokenA) = ($1.20 per TokenA)
-
-$1.2000 Cost of TokenA - $1.0000 price of TokenA = -$0.2000 Loss
-
-P/L = -$0.2000/$1.2000 = -16.7\%
 
 |Block Height|Minimum Price of TokenA in SOMM|Market Price of SOMM|Cost basis of SOMM|Market Price of TokenA in USD|Estimated Profit per Unit|Estimated % Return|Commentary|
 |---|---|---|---|---|---|---|---|
@@ -165,22 +159,10 @@ P/L = -$0.2000/$1.2000 = -16.7\%
 |100000540|4.92|	\$0.2000|\$0.9840|\$1.0000|\$0.0160|1.63%|Based on the rate of change observed, Bidder A predicts that the next price change will reach their desired profit per unit of 2%. They purchase SOMM from Osmosis and transfer it to the Sommelier chain to prepare to bid.|
 |100000550|4.9|	\$0.2000|\$0.9800|\$1.0000|\$0.0200|2.04%|The price updates before Bidder A finishes transferring SOMM to the Sommelier chain, meanwhile Bidder B already has SOMM in their Sommelier wallet and bids enough SOMM to receive 6000 of TokenA, leaving 4000 for Bidder A.|
 
+
 Both bidders bridge their TokenA to Ethereum, each paying 10 SOMM for the bridge fee and another $12 in gas fees when they close the arbitrage by swapping TokenA for USDC. The profit comparisons are shown here:
 
-*Bidder A Expected Cost*: \$0.98 * (10000 * \$1.00) = \$9800
-
-*Bidder A Expected Profit*: \$10000 - \$9800 = \$200
-
-*Bidder A Cost*: \$0.98 * (4000 * \$1.00) = \$3920
-
-*Bidder A Profit*: \$4000 - \$3920 - \$12 - (10 * \$0.20) = \$66
-
-
-*Bidder B Cost*: \$0.98 * (6000 * \$1.00) -  = \$5880
-
-*Bidder B Expected Profit*: \$6000 - \$5880 = \$120
-
-*Bidder B Profit*: \$6000 - \$5880 - \$12 - (10 * \$0.20) = \$106
+Additionally, Bidder A has leftover SOMM that they will sell because they purchased enough to buy 10,000 units of TokenA but only 4000 were available.
 
 |Bidder|Expected Profit|Actual Profit|
 |---|---|---|
@@ -190,5 +172,5 @@ Both bidders bridge their TokenA to Ethereum, each paying 10 SOMM for the bridge
 #### Observations
 
 - It is important to account for the cost of closing the arbitrage when calculating expected return. 
-- Bidder A had assumed they'd get all 10000 units of Token A, and cost of being slow was significant. Because the process of participating is not an atomic transaction (SOMM must be purchased in an earlier transaction), bidders must balance exposure to SOMM price risk vs the opportunity cost of being outbid by a faster bidder. 
+- Bidder A had assumed they'd get all 10,000 units of Token A, and the opportunity cost of being slow was significant. Because the process of participating is not an atomic transaction (SOMM must be purchased in an earlier transaction), bidders must balance exposure to SOMM price risk vs the opportunity cost of being outbid by a faster bidder. 
 
