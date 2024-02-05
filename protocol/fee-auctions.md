@@ -138,7 +138,7 @@ for aa in active_auctions {
 
 ### Example Auction Story
 
-An auction has started for 10,000 units of TokenA. The most recent **Token Prices** of TokenA and SOMM submitted by governance are the 52 week high of TokenA at \$1.00 per unit and 52 week low of SOMM at \$0.10. Because of price of SOMM is above \$0.09 at the time of the auction, any bids that purchase TokenA too early in the auction will do so at a loss.
+An auction has started for 10,000 units of TokenA. The most recent **Token Prices** of TokenA and SOMM submitted by governance are the 52 week high of TokenA at \$1.00 per unit and 52 week low of SOMM at \$0.10. Because the price of SOMM is above \$0.09 at the time of the auction, any bids that purchase TokenA too early in the auction will do so at a loss.
 
 Bidder A wants to take as little risk as possible, and that means not holding SOMM for too long to minimize price exposure as well as making sure their bid is relatively early in the auction so they don't get outbid. Bidder A has decided they will be happy with a 2% profit on the 10,000 bridged TokenA that is being auctioned. They decide that they will wait to buy the SOMM on Osmosis until the auction price is one update away from the price that will fulfill their target profit per unit.
 
