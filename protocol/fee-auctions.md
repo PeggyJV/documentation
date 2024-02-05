@@ -160,7 +160,7 @@ P/L = -$0.2000/$1.2000 = -16.7\%
 |100000010|9.98|	\$0.2000|\$1.9960|\$1.0000|-\$0.9960|-49.90%||
 |100000020|9.96|	\$0.2000|\$1.9920|\$1.0000|-\$0.9920|-49.80%||
 |100000030|9.94|	\$0.2000|\$1.9880|\$1.0000|-\$0.9880|-49.70%||
-|...|	...|	...|	...|	...|	...|	...|Time passes. Because no one places bids, the rate at which the quote price in SOMM decreases accelerates until bids occur.|
+
 |100000530|4.94|	\$0.2000|\$0.9880|\$1.0000|\$0.0120|1.21%||
 |100000540|4.92|	\$0.2000|\$0.9840|\$1.0000|\$0.0160|1.63%|Based on the rate of change observed, Bidder A predicts that the next price change will reach their desired profit per unit of 2%. They purchase SOMM from Osmosis and transfer it to the Sommelier chain to prepare to bid.|
 |100000550|4.9|	\$0.2000|\$0.9800|\$1.0000|\$0.0200|2.04%|The price updates before Bidder A finishes transferring SOMM to the Sommelier chain, meanwhile Bidder B already has SOMM in their Sommelier wallet and bids enough SOMM to receive 6000 of TokenA, leaving 4000 for Bidder A.|
