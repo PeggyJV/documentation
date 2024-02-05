@@ -183,7 +183,7 @@ Both bidders bridge their TokenA to Ethereum, each paying 10 SOMM for the bridge
 *Bidder B Profit*: \$6000 - \$5880 - \$12 - (10 * \$0.20) = \$106
 
 |Bidder|Expected Profit|Actual Profit|
-|---|---|---|---|
+|---|---|---|
 |Bidder A|2.04% of \$9800 (\$200)|\$66|
 |Bidder B|2.04% (\~\$120)|\$106|
 
