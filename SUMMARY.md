@@ -36,6 +36,11 @@
   * [Fees And Reserves](smart-contracts/advanced-smart-contracts/fees-and-reserves.md)
   * [Portfolio (V1.5) Contract Architecture](smart-contracts/advanced-smart-contracts/portfolio-v1.5-contract-architecture.md)
 
+## dApp Development
+
+* [Indexers](dapp-development/indexers/README.md)
+  * [SubQuery](dapp-development/indexers/subquery.md)
+
 ## Protocol
 
 * [How does the protocol work?](protocol/how-does-the-protocol-work.md)
