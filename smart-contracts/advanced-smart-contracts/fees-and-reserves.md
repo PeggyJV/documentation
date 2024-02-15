@@ -75,7 +75,7 @@ When resetting the high watermark, any owed fees are removed. Therefore in certa
 
 ### FeesAndReserves Adaptor Functionality
 
-Like other adaptors , the [FeesAndReservesAdaptor](https://github.com/PeggyJV/cellar-contracts/blob/main/src/modules/adaptors/FeesAndReserves/FeesAndReservesAdaptor.sol) wraps the relevant methods from the FeesAndReserves contract. The FeesAndReserves logic itself does not belong to the adaptor, since reserves are stored in an external contract and not in the cellar itself. The FeesAndReservesAdaptor enables all strategist-triggered functionality as specified in the documentation above.
+Like other adaptors, the [FeesAndReservesAdaptor](https://github.com/PeggyJV/cellar-contracts/blob/main/src/modules/adaptors/FeesAndReserves/FeesAndReservesAdaptor.sol) wraps the relevant methods from the FeesAndReserves contract. The FeesAndReserves logic itself does not belong to the adaptor, since reserves are stored in an external contract and not in the cellar itself. The FeesAndReservesAdaptor enables all strategist-triggered functionality as specified in the documentation above.
 
 Sommelier Cellar builders who wish to apply fees should use an already-deployed FeesAndReserves contract, and must have the FeesAndReservesAdaptor approved for their cellar.
 
