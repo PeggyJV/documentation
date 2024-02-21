@@ -4,7 +4,7 @@
 
 ## Overview
 
-Periodically, cellars bridge accumulated performance and/or management fees of various denominations, such as USDC, wETH, wBTC, etc., to a `cellarfees` module account `somm1hqf42j6zxfnth4xpdse05wpnjjrgc864vwujxx` on the Sommelier chain. In order to convert these fees to SOMM which can be distributed to SOMM stakers, the protocol hosts **dutch auctions** in which arbitrageurs have the opportunity to purchase bridged fees at a discount using SOMM. They may then bridge the fees back to their native chain and swap them for a profit.
+Periodically, cellars bridge accumulated performance and/or platform fees of various denominations, such as USDC, wETH, wBTC, etc., to a `cellarfees` module account `somm1hqf42j6zxfnth4xpdse05wpnjjrgc864vwujxx` on the Sommelier chain. In order to convert these fees to SOMM which can be distributed to SOMM stakers, the protocol hosts **dutch auctions** in which arbitrageurs have the opportunity to purchase bridged fees at a discount using SOMM. They may then bridge the fees back to their native chain and swap them for a profit.
 
 A **dutch auction** is one in which the ask price of the asset decreases over time, and bids are fulfilled on a first-come-first-serve basis. This differs from a regular auction where the auctioneer would fulfill orders based on the most favorable bid. Instead, bidders may execute the exchange whenever they see fit, meaning a bidder must choose between waiting for a better discount and buying before other bidders buy out the auction.
 
@@ -146,7 +146,7 @@ Bidder B has a similar strategy to Bidder A, also targetting a profit of 2%. How
 
 Neither Bidder A nor B remember to account for a bridge fee or the Ethereum gas price in their profit calculations.
 
-For simplicity, we will assume the market price of SOMM and TokenA remains constant, and that the price of TokenA at the time of the auction is $1. In reality, the bidders would need to monitor these prices in real time for accurate profit estimates.
+For simplicity, we will assume the market prices of SOMM and TokenA remain constant, and that the price of TokenA at the time of the auction is $1. In reality, the bidders would need to monitor these prices in real time for accurate profit estimates.
 
 |Block Height|Minimum Price of TokenA in SOMM|Market Price of SOMM|Cost basis of SOMM|Market Price of TokenA in USD|Estimated Profit per Unit|Estimated % Return|Commentary|
 |---|---|---|---|---|---|---|---|
@@ -157,7 +157,7 @@ For simplicity, we will assume the market price of SOMM and TokenA remains const
 |...|	...|	...|	...|	...|	...|	...|Time passes. Because no one places bids, the rate at which the quote price in SOMM decreases accelerates until bids occur.|
 |100000530|4.94|	\$0.2000|\$0.9880|\$1.0000|\$0.0120|1.21%||
 |100000540|4.92|	\$0.2000|\$0.9840|\$1.0000|\$0.0160|1.63%|Based on the rate of change observed, Bidder A predicts that the next price change will reach their desired profit per unit of 2%. They purchase SOMM from Osmosis and transfer it to the Sommelier chain to prepare to bid.|
-|100000550|4.9|	\$0.2000|\$0.9800|\$1.0000|\$0.0200|2.04%|The price updates before Bidder A finishes transferring SOMM to the Sommelier chain, meanwhile Bidder B already has SOMM in their Sommelier wallet and bids enough SOMM to receive 6000 of TokenA, leaving 4000 for Bidder A.|
+|100000550|4.9|	\$0.2000|\$0.9800|\$1.0000|\$0.0200|2.04%|The price updates before Bidder A finishes transferring SOMM to the Sommelier chain, meanwhile Bidder B already has SOMM in their Sommelier wallet and bids enough SOMM to receive 6000 of TokenA, leaving 4000 for Bidder A. All of the TokenA has been purchased, and the auction ends.|
 
 
 Both bidders bridge their TokenA to Ethereum, each paying 10 SOMM for the bridge fee and another $12 in gas fees when they close the arbitrage by swapping TokenA for USDC. The profit comparisons are shown here:
