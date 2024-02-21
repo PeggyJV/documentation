@@ -33,7 +33,7 @@ With documentation found here:\
 \
 [https://github.com/PeggyJV/steward/tree/3.x-main/docs](https://github.com/PeggyJV/steward/tree/3.x-main/docs)
 
-#### Strategist server
+#### Strategist API server
 
 Strategists do not need to run code on-chain -- they can use machine learning, big data, or any other number of systems, and then submit their update recommendations based on their proprietary technology and algorithms. In order to make this possible, each validator must run a strategist server by which a strategist can communicate their update recommendations for approval by the validator set. The reference implementation of this server is called Steward, which by default takes these recommendations at face value and executes them.
 
@@ -50,7 +50,7 @@ Steward can be found here:\
 
 With documentation found here:\
 \
-[https://github.com/PeggyJV/steward/tree/3.x-main/docs](https://github.com/PeggyJV/steward/tree/3.x-main/docs)
+[https://github.com/PeggyJV/steward/tree/main/docs](https://github.com/PeggyJV/steward/tree/main/docs)
 
 ### Slashing
 
@@ -60,7 +60,9 @@ During the testing, bootstrapping, and proof of concept phases of the Sommelier 
 
 ### Communication channels
 
-Telegram channel: how to get an invite link here?
+Telegram channel:
+
+[https://t.me/+wLi1PfO7SjE0MTZh](https://t.me/+wLi1PfO7SjE0MTZh)
 
 Discord server:\
 \
