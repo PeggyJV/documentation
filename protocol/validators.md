@@ -31,7 +31,7 @@ Steward can be found here:\
 
 With documentation found here:\
 \
-[https://github.com/PeggyJV/steward/tree/3.x-main/docs](https://github.com/PeggyJV/steward/tree/3.x-main/docs)
+[https://github.com/PeggyJV/steward/tree/main/docs](https://github.com/PeggyJV/steward/tree/main/docs)
 
 #### Strategist API server
 
@@ -61,10 +61,8 @@ During the testing, bootstrapping, and proof of concept phases of the Sommelier 
 ### Communication channels
 
 Telegram channel:
-
 [https://t.me/+wLi1PfO7SjE0MTZh](https://t.me/+wLi1PfO7SjE0MTZh)
 
-Discord server:\
-\
+Discord server:
 [https://discord.com/invite/ZcAYgSBxvY](https://discord.com/invite/ZcAYgSBxvY)
 
