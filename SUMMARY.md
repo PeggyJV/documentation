@@ -38,8 +38,8 @@
 
 ## Protocol
 
-* [How does the protocol work?](protocol/how-does-the-protocol-work.md)
+* [Overview](protocol/overview.md)
 * [Validators](protocol/validators.md)
 * [Gravity Bridge](protocol/gravity-bridge.md)
 * [Steward](protocol/steward.md)
-* [Auction module and participation](protocol/auction-module-and-participation.md)
+* [Fee Auctions](protocol/fee-auctions.md)
