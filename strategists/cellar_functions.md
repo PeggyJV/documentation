@@ -30,9 +30,6 @@ Note, some functions are destined to be gated by governance and are only tempora
 
 Additionally, the Cellar contract can be found [here](https://github.com/PeggyJV/cellar-contracts/blob/main/src/base/Cellar.sol). Each of the definitions below map to a function of the same name in the solidity code.
 
-Sure! Here is the complete Markdown v2 documentation in one code block:
-
-```markdown
 ### AddPosition
 
 Insert a trusted position to the list of positions used by the cellar at a given index.
@@ -235,4 +232,3 @@ Represents function `cachePriceRouter(bool checkTotalAssets, uint16 allowableRan
 - `check_total_assets`: (`bool`) Whether to check the total assets of the cellar
 - `allowable_range`: (`uint32`) The allowable range of the cellar's total assets to deviate between old and new routers
 - `expected_price_router`: (`string`) The expected price router address
-```
