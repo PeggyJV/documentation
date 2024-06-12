@@ -48,6 +48,8 @@ Allows strategists to manage their Cellar using arbitrary logic calls to adaptor
 
 Represents function `callOnAdaptor(AdaptorCall[] memory data)`
 
+Adaptor call data make up the majority of the protobuf definitions. As such, they have their own reference documentation [here](./adaptor_reference.md).
+
 #### Fields
 - `data`: (`AdaptorCall[]`) Array of adaptor calls
 

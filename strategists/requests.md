@@ -33,7 +33,7 @@ message ScheduleRequest {
 ## Fields
 
 - `block_height`: The Sommelier block height at which a bridge transaction will be created. This is when the bridging process begins, *not* when the EVM transaction is executed. There is an inherent delay between the time of this height and actualy transaction execution on the target contract.
-- `call_data`: The payload of contract call parameters.
+- `call_data`: The payload of contract call parameters. A detailed reference of the `CellarV2_5` type and its function definitions can be found in the [Cellar Functions](./cellar_functions.md) section.
 - `cellar_id`: The ID of the target Cellar, which is its EVM address. The address does not need to be checksummed (EIP-55) as the chain ID will provide target chain information.
 - `chain_id`: For non-Ethereum Cellars only. The EVM ID of the chain where the target Cellar resides. The default is 1, which is Ethereum Mainnet. Axelar provides a reference for other Mainnet chain IDs [here](https://docs.axelar.dev/resources/contract-addresses/mainnet).
 - `deadline`: For non-Ethereum Cellars only. This is the unix timestamp deadline for the contract call to be executed by Axelar. If Axelar fails to relay the transaction before the deadline it will not be executed. This field will be ignored for Ethereum Cellars.
