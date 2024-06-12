@@ -36,6 +36,14 @@
   * [Fees And Reserves](smart-contracts/advanced-smart-contracts/fees-and-reserves.md)
   * [Portfolio (V1.5) Contract Architecture](smart-contracts/advanced-smart-contracts/portfolio-v1.5-contract-architecture.md)
 
+## Strategists
+
+* [Overview](strategists/overview.md)
+* [Protobuf](strategists/protobuf.md)
+* [Requests](strategists/requests.md)
+* [Cellar Functions](strategists/cellar-functions.md)
+* [Adaptor Reference](strategists/adaptor-reference.md)
+
 ## Protocol
 
 * [How does the protocol work?](protocol/how-does-the-protocol-work.md)
