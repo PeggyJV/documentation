@@ -8,11 +8,7 @@ Documentation for the current version of steward can be found here:
 
 ### Deployment
 
-Unlike most chains, Sommelier requires a server API sidecar process (Steward) to be accessible from the internet. Communications to Steward are protected using mutually-authenticated TLS. During our bootstrapping phase, Steward has a harcoded certificate authority to allow Seven Seas client certificates, though the protocol will be expanded to allow new strategist integrators via governance in the v7 upgrade, which will also include an authorization layer mapping specific strategist integrators with the cellar addresses for which they have been approved. For validators, they must create their own self-signed CA and server certificates by following the instructions in the "steward-registry" repo and adding their data via pull request:
-
-[https://github.com/PeggyJV/steward-registry](https://github.com/PeggyJV/steward-registry)
-
-The v7 upgrade will also provide a method for handling this on-chain and will remove the necessity of the registry.
+Unlike most chains, Sommelier requires a server API sidecar process (Steward) to be accessible from the internet. Communications to Steward are protected using mutually-authenticated TLS. Strategists must be approved by governance by submitting a proposal to become a Publisher on chain. The Publisher entry contains their certificate authority and their client endpoint. For validators, they must create their own self-signed CA and server certificates and submit them to the chain as a Subscriber in the x/pubsub module.
 
 The Steward server process must be on a publicly available port, the default of which is 5734, but can be changed as necessary. The fully qualified URL and port number to access your steward instance should be included in your steward-registry pull request.
 
@@ -24,6 +20,4 @@ Steward's API is a GRPC interface which exposes a defined subset of contract fun
 
 Strategists must submit calls to each validator's Steward instance using the defined GRPC API. In order for a call to be made to an Ethereum cellar, these updates must be sent to the Steward instance's of a consensus power of validators. The current architecture defines a periodic voting window every 10 blocks, and the strategist should submit their calls at the beginning of this window to allow for some latency. A call that reverts will remain in the gravity module until it times out, and depending on the revert being either transient or permanent, it may be retried at any time until it times out. The current timeout period is expected to be roughly 12 hours. The v7 upgrade will modify some of these requirements, and rather than timing submissions during voting windows, calls will execute at a height specified by the strategist.
 
-The list of Steward endpoints for each validator can be found in the steward-registry:
-
-[https://github.com/PeggyJV/steward-registry](https://github.com/PeggyJV/steward-registry)
+Available Steward endpoints can be queried from the x/pubsub module on chain. A Subscriber represents a validator's Steward instance, and contains the info necessary for a strategist client to make an authenticated connection.
