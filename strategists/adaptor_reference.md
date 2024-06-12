@@ -1,6 +1,6 @@
 # Adaptor Reference
 
-The `CallOnAdaptor` Cellar function allows the strategist the leverage any adaptor contract that is approved by governance and not blocked by Steward. Adaptors are contracts that provide interfaces to other smart contracts such as utility contracts or DeFi protocols such as Aave, Uniswap, Balancer, etc.
+The `CallOnAdaptor` Cellar function allows the strategist the leverage any adaptor contract that is approved by governance and not blocked by Steward. Adaptors are contracts that provide interfaces to other smart contracts such as utility contracts or DeFi protocols such as Aave, Uniswap, Balancer, etc. The source code for adaptor contracts can be found [in the cellar-contracts repository](https://github.com/PeggyJV/cellar-contracts/tree/main/src/modules/adaptors)
 
 All adaptor calls are wrapped in the `AdaptorCall` type, which contains the address of the target adaptor, and the actual adaptor call data. The source code can be found [here](https://github.com/PeggyJV/steward/blob/fe82aa23542bdf6c28233b59ba507b9beb52014a/proto/steward/v4/cellar_v2.proto#L1273-L1350):
 
