@@ -87,7 +87,7 @@ message AdaptorCall {
 
 Notice that each available call data type has a plural name, for example `StakingAdaptorV1Calls`. These types are wrappers for their actual respective call types, in this case `StakingAdaptorV1Call` (no 's' at the end) that allow multiple function calls to the same adaptor to be executed in one transaction.  
 
-Each protocol has it's own .proto file where types are defined for adaptor-specific functions. In general, only the latest version of an adaptor proto should be used. That is, if there is a file containing both MyAdaptorV1 and MyAdaptorV2 types, V1 is probably only relevant for older Cellars.
+Each protocol has its own .proto file where types are defined for adaptor-specific functions. In general, only the latest version of an adaptor proto should be used. That is, if there is a file containing both MyAdaptorV1 and MyAdaptorV2 types, V1 is probably only relevant for older Cellars.
 
 The full list of .proto files defining functions for each adaptor can be found [here](https://github.com/PeggyJV/steward/tree/main/proto/steward/v4)
 
