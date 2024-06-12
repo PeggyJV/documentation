@@ -1,6 +1,6 @@
 # Requests
 
-As mentioned in the Overview, the main request type in the Steward API is `ScheduleRequest`, which is used to pass call data parameters to Steward which will then be built into the actualy contract call data.
+As mentioned in the Overview, Strategists must write their own code for interacting with Steward leveraging the protobuf definitions. The main request type in the Steward API is `ScheduleRequest`, which is used to pass call data parameters to Steward which will then be built into the actualy contract call data.
 The request proto defintion can be found [here]().
 
 ## Definition

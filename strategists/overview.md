@@ -11,6 +11,8 @@ Strategists are users or organizations responsible for submitting parameters for
 
 Strategists must also generate a Certificate Authority and use it to generate a self-signed certificate, which is the representation of a strategist's identity as a Publisher on the Sommelier chain required to create a trusted connection with the Steward API.
 
+Strategists are also responsible for writing their own logic for interacting with the Steward API in the language of their choice. The Steward API interfaces and gRPC client can be generated in many different languages.
+
 Requests to the Steward API use the type `ScheduleRequest`. This request contains contract call data and information used by the Sommelier chain to determine the destination of the contract and the timing of transaction execution. The response type `ScheduleResponse` contains information that can be used to query the Sommelier chain in order to confirm that a call, referred to on-chain as a Cork, was submitted and scheduled successfully. 
 
 ```protobuf
