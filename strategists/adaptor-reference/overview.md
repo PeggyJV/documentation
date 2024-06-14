@@ -6,7 +6,7 @@ The [Steward API reference](https://github.com/PeggyJV/steward/blob/main/docs/ap
 
 ## AdaptorCall type
 
-The `CallOnAdaptor` Cellar function allows the strategist the leverage any adaptor contract that is approved by governance and not blocked by Steward. Adaptors are contracts that provide interfaces to other smart contracts such as utility contracts or DeFi protocols such as Aave, Uniswap, Balancer, etc. The source code for adaptor contracts can be found [in the cellar-contracts repository](https://github.com/PeggyJV/cellar-contracts/tree/main/src/modules/adaptors)
+The `CallOnAdaptor` Cellar function allows the strategist to leverage any adaptor contract that is approved by governance and not blocked by Steward. Adaptors are contracts that provide interfaces to other smart contracts such as utility contracts or DeFi protocols like Aave, Uniswap, Balancer, etc. The source code for adaptor contracts can be found [in the cellar-contracts repository](https://github.com/PeggyJV/cellar-contracts/tree/main/src/modules/adaptors)
 
 All adaptor calls are wrapped in the `AdaptorCall` type, which contains the address of the target adaptor, and the actual adaptor call data. The source code can be found [here](https://github.com/PeggyJV/steward/blob/fe82aa23542bdf6c28233b59ba507b9beb52014a/proto/steward/v4/cellar_v2.proto#L1273-L1350):
 
@@ -99,7 +99,7 @@ The full list of .proto files defining functions for each adaptor can be found [
 
 ## Flashloans
 
-Some adaptors have a flashloan function. To avoid circular dependencies in the protos, seperate protobuf files are created for the flashloan functionality, and these files have their own near-identical `AdaptorCall` definitions. This means when using an adaptor call in a flashloan you will need to be sure you are importing the correct `AdaptorCall` type. For example, the [Aave V3 Debt Token Flash Loan](https://github.com/PeggyJV/steward/blob/main/proto/steward/v4/aave_v3_debt_token_flash_loan.proto) proto is for the same adaptor as `aave_v3_debt_token.proto`, and defines it's own `AdaptorCall` enum called `AdaptorCallForAaveV3FlashLoan`. 
+Some adaptors have a flashloan function. To avoid circular dependencies in the protos, seperate protobuf files are created for the flashloan functionality, and these files have their own near-identical `AdaptorCall` definitions. This means when using an adaptor call in a flashloan you will need to be sure you are importing the correct `AdaptorCall` type. For example, the [Aave V3 Debt Token Flash Loan](https://github.com/PeggyJV/steward/blob/main/proto/steward/v4/aave_v3_debt_token_flash_loan.proto) proto is for the same adaptor as `aave_v3_debt_token.proto`, and defines its own `AdaptorCall` enum called `AdaptorCallForAaveV3FlashLoan`. 
 
 ## Adaptor Call Wrappers and Common Functions
 
@@ -171,4 +171,4 @@ message AaveATokenAdaptorV2 {
 }
 ```
 
-This structure will be reflected in the location of each type in in the your generated proto bindings library.
+This structure will be reflected in the location of each type in the your generated proto bindings library.
