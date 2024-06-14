@@ -1,4 +1,10 @@
-# Adaptor Reference
+# Adaptor Reference Overview
+
+## API Reference
+
+The [Steward API reference](https://github.com/PeggyJV/steward/blob/main/docs/api/steward_api_doc.md) is generated directly from the protobuf files and appear in alphabetical order. 
+
+## AdaptorCall type
 
 The `CallOnAdaptor` Cellar function allows the strategist the leverage any adaptor contract that is approved by governance and not blocked by Steward. Adaptors are contracts that provide interfaces to other smart contracts such as utility contracts or DeFi protocols such as Aave, Uniswap, Balancer, etc. The source code for adaptor contracts can be found [in the cellar-contracts repository](https://github.com/PeggyJV/cellar-contracts/tree/main/src/modules/adaptors)
 
@@ -91,3 +97,78 @@ Each protocol has its own .proto file where types are defined for adaptor-specif
 
 The full list of .proto files defining functions for each adaptor can be found [here](https://github.com/PeggyJV/steward/tree/main/proto/steward/v4)
 
+## Flashloans
+
+Some adaptors have a flashloan function. To avoid circular dependencies in the protos, seperate protobuf files are created for the flashloan functionality, and these files have their own near-identical `AdaptorCall` definitions. This means when using an adaptor call in a flashloan you will need to be sure you are importing the correct `AdaptorCall` type. For example, the [Aave V3 Debt Token Flash Loan](https://github.com/PeggyJV/steward/blob/main/proto/steward/v4/aave_v3_debt_token_flash_loan.proto) proto is for the same adaptor as `aave_v3_debt_token.proto`, and defines it's own `AdaptorCall` enum called `AdaptorCallForAaveV3FlashLoan`. 
+
+## Adaptor Call Wrappers and Common Functions
+
+All adaptor call types have a corresponding wrapper to allow multiple adaptor function calls in the same transaction. For example:
+
+```protobuf
+// Represents call data for the Aave AToken adaptor V2, used to manage lending positions on Aave
+message AaveATokenAdaptorV2 {
+    oneof function {
+        /***** BASE ADAPTOR FUNCTIONS *****/
+
+        // Represents function `revokeApproval(ERC20 asset, address spender)`
+        RevokeApproval revoke_approval = 1;
+
+        /***** ADAPTOR-SPECIFIC FUNCTIONS *****/
+
+        // Represents function `depositToAave(ERC20 tokenToDeposit, uint256 amountToDeposit)`
+        DepositToAave deposit_to_aave = 2;
+        // Represents function `withdrawFromAave(ERC20 tokenToWithdraw, uint256 amountToWithdraw)`
+        WithdrawFromAave withdraw_from_aave = 3;
+    }
+    
+    // ... function definitions below
+}
+
+// Wrapper
+message AaveATokenAdaptorV2Calls {
+    repeated AaveATokenAdaptorV2 calls = 1;
+}
+```
+
+Additionally, all adaptor call types support the `RevokeApproval` cellar function, which allows the strategist to revoke approval for an adaptor contract to spend a specific ERC20 token. This function is useful for security purposes, as it allows the strategist to limit the permissions of an adaptor contract.
+
+## Function Type Definitions
+
+Each adaptor call message defines it's own function types within itself. This way, function names are scoped only to the adaptor call type they are relevant to in the protobuf files. For example, the `AaveATokenAdaptorV2` message defines the `DepositToAave` function, which is specific to the Aave AToken adaptor V2, and can be found below the `oneof` shown in the earlier example:
+
+```protobuf
+// Represents call data for the Aave AToken adaptor V2, used to manage lending positions on Aave
+message AaveATokenAdaptorV2 {
+    oneof function {
+        /***** BASE ADAPTOR FUNCTIONS *****/
+
+        // Represents function `revokeApproval(ERC20 asset, address spender)`
+        RevokeApproval revoke_approval = 1;
+
+        /***** ADAPTOR-SPECIFIC FUNCTIONS *****/
+
+        // Represents function `depositToAave(ERC20 tokenToDeposit, uint256 amountToDeposit)`
+        DepositToAave deposit_to_aave = 2;
+        // Represents function `withdrawFromAave(ERC20 tokenToWithdraw, uint256 amountToWithdraw)`
+        WithdrawFromAave withdraw_from_aave = 3;
+    }
+
+    /*
+    * Allows strategists to lend assets on Aave.
+    *
+    * Represents function `depositToAave(ERC20 tokenToDeposit, uint256 amountToDeposit)`
+    */
+    message DepositToAave {
+        // The address of the ERC20 token to deposit
+        string token = 1;
+        // The amount to deposit
+        string amount = 2;
+    }
+
+    // ... more function definitions below
+
+}
+```
+
+This structure will be reflected in the location of each type in in the your generated proto bindings library.
