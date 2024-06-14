@@ -135,7 +135,7 @@ Additionally, all adaptor call types support the `RevokeApproval` cellar functio
 
 ## Function Type Definitions
 
-Each adaptor call message defines it's own function types within itself. This way, function names are scoped only to the adaptor call type they are relevant to in the protobuf files. For example, the `AaveATokenAdaptorV2` message defines the `DepositToAave` function, which is specific to the Aave AToken adaptor V2, and can be found below the `oneof` shown in the earlier example:
+Each adaptor call message defines its own function types within itself. This way, function names are scoped only to the adaptor call type they are relevant to in the protobuf files. For example, the `AaveATokenAdaptorV2` message defines the `DepositToAave` function, which is specific to the Aave AToken adaptor V2, and can be found below the `oneof` shown in the earlier example:
 
 ```protobuf
 // Represents call data for the Aave AToken adaptor V2, used to manage lending positions on Aave
