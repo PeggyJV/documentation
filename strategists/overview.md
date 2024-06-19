@@ -1,12 +1,5 @@
 # Overview
 
-## Index
-- [Overview](#overview)
-- [Protobuf](./protobuf.md) 
-- [Requests](./requests.md)
-- [Cellar Functions](./cellar_functions.md) 
-- [Adaptor Reference](./adaptor_reference.md)
-
 Strategists are users or organizations responsible for submitting parameters for Cellar rebalances and other contract calls to Sommelier through the Steward API. To accomplish this they use the [Steward API](). The Steward API is defined by a protobuf package and can be used with a gRPC client. Strategists must generate proto bindings and a client from the Steward API protobuf files for their preferred language.
 
 Strategists must also generate a Certificate Authority and use it to generate a self-signed certificate, which is the representation of a strategist's identity as a Publisher on the Sommelier chain required to create a trusted connection with the Steward API.
