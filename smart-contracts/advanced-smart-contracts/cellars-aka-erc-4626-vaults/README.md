@@ -24,7 +24,7 @@ This restriction is enforced via the `totalAssets` [check](https://github.com/Pe
 
 <figure><img src="../../../.gitbook/assets/SharePriceOracle Schematic.jpg" alt=""><figcaption><p>CellarsV2.5 SharePriceOracle Architecture </p></figcaption></figure>
 
-> **Note:** as mentioned in ["PriceRouter Details,"](https://app.gitbook.com/o/4atpZ4Rl0cQ7Zflpk08d/s/gTlidpvGOM2ZKa8GDX86/\~/changes/9/smart-contracts/advanced-smart-contracts/pricerouter-details) the CellarsV2.5 architecture that newer Cellars are beginning to use (such as [TurboswETH](https://app.sommelier.finance/strategies/Turbo-SWETH/manage)) incorporate Chainlink Automation to carry out the gas-intensive calculations for `totalAssets`. The CellarsV2.5 architecture that uses the `ERC4626SharePriceOracle` is the `CellarWithOracle.sol` implementation, specifically. It relies on the `latestPrice` or `timeWeightedAverageAnswer` for the `sharePrice` that is then used to calculate `totalAssets`.
+> **Note:** as mentioned in ["PriceRouter Details,"](../pricerouter-details/README.md) the CellarsV2.5 architecture that newer Cellars are beginning to use (such as [TurboswETH](https://app.sommelier.finance/strategies/Turbo-SWETH/manage)) incorporate Chainlink Automation to carry out the gas-intensive calculations for `totalAssets`. The CellarsV2.5 architecture that uses the `ERC4626SharePriceOracle` is the `CellarWithOracle.sol` implementation, specifically. It relies on the `latestPrice` or `timeWeightedAverageAnswer` for the `sharePrice` that is then used to calculate `totalAssets`.
 
 The `totalAssets` and `totalShares` checks are the principal security mechanisms that prevent abuse of adaptor calls - Cellars cannot and do not introspect the contents of these calls. As long as an adaptor and position have been trusted by governance and set up on the Cellar, the Cellar allows any calldata payload to be sent to that adaptor. For Cellars with specific use cases or high-reputation strategists, governance can increase the TVL envelope by calling `setRebalanceDeviation`.
 
@@ -38,7 +38,7 @@ Within a cellar, each position is stored in ordered lists, separated into `credi
 * `debtPositions` represent debt incurred by the Cellar, which decreases the TVL (for instance, an open borrow from AAVE).
 * The `holdingPosition` represents a specially-designated position, where user deposits are immediately routed.&#x20;
 
-The values of these lists are `uint32` values that represent the `positionId` as specified in the Registry (see ["Registry" ](https://app.gitbook.com/o/4atpZ4Rl0cQ7Zflpk08d/s/gTlidpvGOM2ZKa8GDX86/\~/changes/9/smart-contracts/advanced-smart-contracts/registry-details)for more details). Cellars are deployed with a preset number of `creditPositions`, `debtPositions`, and a `holdingPosition`. The holding position must also be a member of the `creditPositions` array.
+The values of these lists are `uint32` values that represent the `positionId` as specified in the Registry (see ["Registry" ](../registry-details/README.md)for more details). Cellars are deployed with a preset number of `creditPositions`, `debtPositions`, and a `holdingPosition`. The holding position must also be a member of the `creditPositions` array.
 
 Strategists manipulate position ordering in the following ways:
 

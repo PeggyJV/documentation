@@ -14,6 +14,6 @@ Adaptors are the mechanisms by which strategists can interact with external prot
 * An adaptor should be able to report its own balance in terms of the `assetOf` asset, via the invocation of `balanceOf`.
 * An adaptor should contain `deposit`, `withdraw`, and `withdrawableFrom` functions that allow Cellars to move assets into and out of the position in response to user deposit/withdrawal requests. For adaptors that do not represent liquid positions (such as adaptors for debt positions, like the [AaveDebtTokenAdaptor](https://github.com/PeggyJV/cellar-contracts/blob/main/src/modules/adaptors/Aave/AaveDebtTokenAdaptor.sol)), the implementor can have `withdrawableFrom` return `0`.
 
-For more information on adaptor architecture, see ["Building Adaptors."](https://app.gitbook.com/o/4atpZ4Rl0cQ7Zflpk08d/s/gTlidpvGOM2ZKa8GDX86/\~/changes/9/smart-contracts/external-protocol-integration/building-adaptors)
+For more information on adaptor architecture, see ["Building Adaptors."](../../external-protocol-integration/building-adaptors.md)
 
 See the next page for a current API for `BaseAdaptor.sol`.
