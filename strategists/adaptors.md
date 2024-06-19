@@ -1,4 +1,4 @@
-# Adaptor Reference Overview
+# Adaptors
 
 ## API Reference
 
