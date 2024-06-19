@@ -42,7 +42,7 @@
 * [Protobuf](strategists/protobuf.md)
 * [Requests](strategists/requests.md)
 * [Cellar Functions](strategists/cellar-functions.md)
-* [Adaptor Reference](strategists/adaptor-reference.md)
+* [Adaptors](strategists/adaptor.md)
 
 ## Protocol
 
