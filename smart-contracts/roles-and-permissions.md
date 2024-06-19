@@ -20,7 +20,7 @@ Strategists are the managers of a Cellar, who develop and execute the strategies
 
 Each strategist can perform actions through their adaptors via the `callOnAdaptor` function. Strategists must craft their target adaptor calls, with associated `calldata`, and submit them via the Sommelier chain. The Gravity Bridge then forwards the strategist's provided payload to the `callOnAdaptor` function.&#x20;
 
-For a more comprehensive description of all the ways strategists can use adaptors to create and execute on-chain strategies, see the ["Adaptors"](https://app.gitbook.com/o/4atpZ4Rl0cQ7Zflpk08d/s/gTlidpvGOM2ZKa8GDX86/\~/changes/9/smart-contracts/advanced-smart-contracts/adaptors) section.
+For a more comprehensive description of all the ways strategists can use adaptors to create and execute on-chain strategies, see the ["Adaptors"](./advanced-smart-contracts/adaptors/README.md) section.
 
 In addition to adaptor calls, strategists can manage the ordering of their cellar's positions. This ordering informs withdrawal priority for a given Cellar - the first positions will be withdrawn from first. Positions can be managed using the following calls:
 
@@ -41,16 +41,16 @@ Within the context of a single cellar, governance has the following abilities:
 
 * Initiate and lift shutdowns of the Cellar in emergency scenarios, via `initiateShutdown` and `liftShutdown`.
 * Set the amount of time cellar deposits are initially locked, via `setShareLockingPeriods` (see "Share Locking Periods" for more information, also this only affects Cellars that do not have share price oracles).
-* Set the allowed rebalance deviation for a cellar during a batch of adaptor calls, via `setRebalanceDeviation` (see ["Adaptors"](https://app.gitbook.com/o/4atpZ4Rl0cQ7Zflpk08d/s/gTlidpvGOM2ZKa8GDX86/\~/changes/9/smart-contracts/advanced-smart-contracts/adaptors) for more information).
+* Set the allowed rebalance deviation for a cellar during a batch of adaptor calls, via `setRebalanceDeviation` (see ["Adaptors"](./advanced-smart-contracts/adaptors/README.md) for more information).
 * Set up new adaptors, and positions for a given cellar to enable new functionality, via `addAdaptorToCatalogue, and addPositionToCatalogue.`
 
 ### SOMM Governance Voted In Multi-Sig
 
 The Multi-Sig is voted in via SOMM Governance and can be voted out at any time. Together, the Multi-Sig and the SOMM Governance carry overlapping responsibilities to manage the `Registry`, `PriceRouter` and the `Cellars`. The Multi-Sig handles aspects associated with the `Registry` and `PriceRouter`, of which include:
 
-* Adding new assets to the Price Router via `addAsset` (see ["Price Router"](https://app.gitbook.com/o/4atpZ4Rl0cQ7Zflpk08d/s/gTlidpvGOM2ZKa8GDX86/\~/changes/9/smart-contracts/advanced-smart-contracts/pricerouter-details) for more information).
+* Adding new assets to the Price Router via `addAsset` (see ["Price Router"](./advanced-smart-contracts/pricerouter-details/README.md) for more information).
 * Change automation settings on the Price Router, via `setAutomationRegistry`, `setGasFeed`, `setGasConstant`, and `setMinDelta`.
-* Adding new slots to the Registry via `register`, or updating existing stored addresses (see ["Registry"](https://app.gitbook.com/o/4atpZ4Rl0cQ7Zflpk08d/s/gTlidpvGOM2ZKa8GDX86/\~/changes/9/smart-contracts/advanced-smart-contracts/registry-details) for more information).
+* Adding new slots to the Registry via `register`, or updating existing stored addresses (see ["Registry"](./advanced-smart-contracts/registry-details/README.md) for more information).
 * Setting the address of the fee distribution mechanism on the Sommelier Chain, via `setFeesDistributor`.
 * Enabling cellars to use a newly deployed adaptor given certain risk parameters, via `trustAdaptor`.
 * Enabling cellars to use positions that interact with trusted adaptors given certain risk parameters, via `trustPosition`.
