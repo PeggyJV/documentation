@@ -34,3 +34,16 @@ The following four concepts categorize the scope of smart contract functionality
 > There have been iterations on the above concepts throughout the lifetime of the Sommelier protocol. These are noted in each of their detailed subsections. A full V3 architecture upgrade is being currently discussed but not in the immediate development timeline.
 
 Please see the next page for a general walk-through of the setup of a Cellar and its parts.
+
+## Withdrawal Queue
+
+Cellars V2 introductes a new feature called the Withdrawal Queue.
+
+A user submits a withdrawal request with a deadline for the withdrawal to be completed, a discount value, and the number of shares they want to redeem.
+A solver will then fulfill the withdrawal request on behalf of the user within the deadline (assuming the request can be feasibly fulfilled). The discount is meant to compensate solvers for the gas costs of fulfilling the withdraw. Users pay a very small gas fee when initiating the withdrawal but the fee for actually redeeming the shares for assets is paid by the solver.
+
+
+*Unfilled withdrawal requests:* During the Pending Withdrawal period, if the LP token price falls below the target LP token price (what the seller has asked for from the solver), it may not be filled by the Solver and will expire at the end of the withdrawal period.
+
+
+*Why withdrawals are queued:* There is a security benefit to forcing withdrawals to go through the Queue: by preventing round trip transactions (depositing and withdrawing in a single transaction) the vault mitigates any atomic arbitrage issues.
