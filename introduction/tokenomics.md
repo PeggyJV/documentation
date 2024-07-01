@@ -45,6 +45,7 @@ All investor distributions were complete as of August 2023.
 
 [somm1ymy6sx49d538gtdw2y6jnqwhcv3v9de8c92rql](https://www.mintscan.io/sommelier/address/somm1ymy6sx49d538gtdw2y6jnqwhcv3v9de8c92rql)
 
+[somm1x52ufr8f6mheac4z43w0tl0e89lzxryude70t6](https://www.mintscan.io/sommelier/address/somm1x52ufr8f6mheac4z43w0tl0e89lzxryude70t6)
 
 #### Vesting addresses
 
@@ -85,5 +86,3 @@ All investor distributions were complete as of August 2023.
 [somm1p0xd9dwqztlua5vjl686alvzn3fng5hacu5r04](https://www.mintscan.io/sommelier/address/somm1p0xd9dwqztlua5vjl686alvzn3fng5hacu5r04)
 
 [somm15urq2dtp9qce4fyc85m6upwm9xul3049s838j8](https://www.mintscan.io/sommelier/address/somm15urq2dtp9qce4fyc85m6upwm9xul3049s838j8)
-
-
