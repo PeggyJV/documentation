@@ -43,6 +43,17 @@
 * [Requests](strategists/requests.md)
 * [Cellar Functions](strategists/cellar-functions.md)
 * [Adaptors](strategists/adaptors.md)
+* [Deploy](strategists/deploy/README.md)
+  * [Prerequisites](strategists/deploy/prerequisites/README.md)
+    * [Environment setup](strategists/deploy/prerequisites/env-setup.md)
+    * [Deployer](strategists/deploy/prerequisites/deployer.md)
+    * [Registry](strategists/deploy/prerequisites/registry.md)
+    * [Price Router](strategists/deploy/prerequisites/price-router.md)
+    * [Adaptors](strategists/deploy/prerequisites/adaptors.md)
+  * [Cellar](strategists/deploy/cellar/README.md)
+    * [Permutations](strategists/deploy/cellar/permutations.md)
+    * [Variables](strategists/deploy/cellar/variables.md)
+    * [Deploy](strategists/deploy/cellar/deploy.md)
 
 ## Protocol
 
