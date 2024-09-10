@@ -1,6 +1,6 @@
 # Adaptors
 
-[**Adaptors**](../../../smart-contracts/advanced-smart-contracts/adaptors) integrate Cellars with external DeFi protocols, enabling them to use the assets in the protocol. Catalogue of adaptors is located in “src/modules/adaptors” and explanations about different adaptors can be found [**here**](https://github.com/PeggyJV/cellar-contracts/blob/main/docs/adapters.md).
+[**Adaptors**](../../../smart-contracts/advanced-smart-contracts/adaptors) integrate Cellars with external DeFi protocols, enabling them to use the assets in the protocol. Catalogue of adaptors is located in [**src/modules/adaptors**](https://github.com/PeggyJV/cellar-contracts/tree/main/src/modules/adaptors) and explanations about different adaptors can be found [**here**](https://github.com/PeggyJV/cellar-contracts/blob/main/docs/adapters.md).
 
 Desired adaptors should be imported from the catalogue and be used like this:
 
