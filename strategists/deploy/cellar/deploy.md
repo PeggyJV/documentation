@@ -14,15 +14,6 @@ Ensure you have the following environment variables configured:
 
 ### 2. Run the Deployment Script
 
-Use the following command to run the deployment script for **CellarWithMultiAssetDeposit**:
-
-```bash
-source .env && forge script script/Arbitrum/test/DeployTestMultiAssetDeposit.s.sol:DeployTestMultiAssetDepositScript --rpc-url $ARBITRUM_RPC_URL --private-key $PRIVATE_KEY --optimize --optimizer-runs 200 --with-gas-price 100000000 --verify --etherscan-api-key $ARBISCAN_KEY --slow --broadcast
-
-You can modify the `--with-gas-price` value to reflect current network conditions.
-
-### 3. Understanding the Script
-
 The deployment script (`DeployTestMultiAssetDepositScript`) performs the following key actions:
 
 - **Deploys the Cellar Contract**:  
@@ -37,7 +28,7 @@ The deployment script (`DeployTestMultiAssetDepositScript`) performs the followi
 - **Transfers Ownership**:  
   Once the cellar is configured, the ownership is transferred to the strategist (`devStrategist`).
 
-### 4. Script Breakdown
+### 3. Script Breakdown
 
 - `vm.startBroadcast()` starts broadcasting the transactions.
 - `CellarWithMultiAssetDeposit cellar = _createCellar(...)` deploys the new cellar contract.
@@ -46,9 +37,14 @@ The deployment script (`DeployTestMultiAssetDepositScript`) performs the followi
 - `cellar.setAlternativeAssetData(...)` sets up alternative assets with their respective fees.
 - `cellar.transferOwnership(devStrategist)` transfers ownership to the desired strategist address.
 
-### 5. Deploying on Production
+### 5. Deploying
 
-After testing, you can deploy your **CellarWithMultiAssetDeposit** contract in a production environment by updating the deployment script parameters and using a production configuration.
+Use the following command to run the deployment script for **CellarWithMultiAssetDeposit**:
+
+```bash
+source .env && forge script script/Arbitrum/test/DeployTestMultiAssetDeposit.s.sol:DeployTestMultiAssetDepositScript --rpc-url $ARBITRUM_RPC_URL --private-key $PRIVATE_KEY --optimize --optimizer-runs 200 --with-gas-price 100000000 --verify --etherscan-api-key $ARBISCAN_KEY --slow --broadcast
+
+You can modify the `--with-gas-price` value to reflect current network conditions.
 
 #### Example Deployment Scripts
 
