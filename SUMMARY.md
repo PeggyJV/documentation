@@ -52,7 +52,6 @@
     * [Adaptors](strategists/deploy/prerequisites/adaptors.md)
   * [Cellar](strategists/deploy/cellar/README.md)
     * [Permutations](strategists/deploy/cellar/permutations.md)
-    * [Variables](strategists/deploy/cellar/variables.md)
     * [Deploy](strategists/deploy/cellar/deploy.md)
 
 ## Protocol

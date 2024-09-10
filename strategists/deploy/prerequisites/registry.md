@@ -5,7 +5,7 @@ On initial deploy registry should be configured with adaptors and positions need
 
 Setting up the registry, price router, adaptors and positions should be done in one deploy script which makes the process simpler. That way the references to different instances could be used right away. Because of that the examples for the next parts reference the same script.
 
-Deploying registry and trusting adaptors and positions looks like this:
+Deploying [**Registry.sol**](https://github.com/PeggyJV/cellar-contracts/blob/zaki/PeggyJYDeployments/src/Registry.sol) and trusting adaptors and positions looks like this:
 
 ``` solidity
 Registry public registry;
