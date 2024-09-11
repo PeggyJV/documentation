@@ -12,7 +12,7 @@ Ensure you have the following environment variables configured:
 - `PRIVATE_KEY` – Your private key to authorize the deployment.
 - `ARBISCAN_KEY` – Your Etherscan API key for verifying contracts on Arbitrum.
 
-### 2. Run the Deployment Script
+### 2. Understanding the Script
 
 The deployment script (`DeployTestMultiAssetDepositScript`) performs the following key actions:
 
