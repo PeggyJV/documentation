@@ -37,6 +37,15 @@ The deployment script (`DeployTestMultiAssetDepositScript`) performs the followi
 - `cellar.setAlternativeAssetData(...)` sets up alternative assets with their respective fees.
 - `cellar.transferOwnership(devStrategist)` transfers ownership to the desired strategist address.
 
+### 4. Share Price Oracle Setup
+
+If your cellar permutation requires an **ERC4626 Share Price Oracle**, ensure the oracle is set up to handle share pricing during user entry and exit. The setup involves configuring the share price oracle and ensuring it can calculate the cellar's total assets. 
+
+- You will need to update the cellar to reference the **ERC4626 Share Price Oracle**.
+- Make sure to handle the `SharePriceOracleUpdated` event and verify that the oracle has the correct decimals (usually 18).
+- Full example of how to integrate the share price oracle is available [here](https://github.com/PeggyJV/cellar-contracts/blob/main/src/base/permutations/CellarWithOracle.sol#L58-L69).
+
+
 ### 5. Deploying
 
 Use the following command to run the deployment script for **CellarWithMultiAssetDeposit**:
