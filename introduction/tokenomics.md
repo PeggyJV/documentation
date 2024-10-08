@@ -15,7 +15,7 @@ SOMM is the native token of the Sommelier network, a proof-of-stake blockchain b
 
 **Gas Fees:** SOMM can be used to pay for gas fees (transaction fees) on the network. Transaction fees paid in SOMM help to ensure the network runs smoothly.\
 \
-**Protocol Governance:** SOMM can be used to create and vote on proposals. By participating in governance, SOMM holders control key pieces of the protocol. They have the ability to approve new vauls and control the deployment of a large community Treasury.&#x20;
+**Protocol Governance:** SOMM can be used to create and vote on proposals. By participating in governance, SOMM holders control key pieces of the protocol. They have the ability to approve new vaults and control the deployment of a large community Treasury.&#x20;
 
 Overall, SOMM is an essential component of the Sommelier network, providing the necessary infrastructure for a decentralized and community-driven ecosystem.
 
