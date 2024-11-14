@@ -13,7 +13,9 @@ constructorArgs = abi.encode(ARB_SEQUENCER_UPTIME_FEED, uint256(3_600), dev0Addr
 priceRouter = PriceRouter(deployer.deployContract(priceRouterName, creationCode, constructorArgs, 0));
 ```
 
-Price router has to be configured with assets and price feeds. Sommelier Cellars mainly use Chainlink Data Feeds for pricing. Data feed addresses can also be imported from the [**address file**](https://github.com/PeggyJV/cellar-contracts/blob/zaki/PeggyJYDeployments/test/resources/Arbitrum/ArbitrumAddressesPeggyJV.sol).
+Price router has to be configured with assets and price feeds. Sommelier Cellars mainly use Chainlink Data Feeds for pricing. 
+
+Data feed addresses can be found in [**Chainlink docs**](https://docs.chain.link/data-feeds/price-feeds/addresses). They should also be used from the [**address file**](https://github.com/PeggyJV/cellar-contracts/blob/zaki/PeggyJYDeployments/test/resources/Arbitrum/ArbitrumAddressesPeggyJV.sol).
 
 ``` solidity
 uint256 price = uint256(IChainlinkAggregator(WETH_USD_FEED).latestAnswer());

@@ -15,6 +15,19 @@ registry.setAddress(2, address(priceRouter));
 registry.trustAdaptor(erc20Adaptor);
 registry.trustPosition(ERC20_USDC_POSITION, address(erc20Adaptor), abi.encode(USDC));
 ```
+`setAddress` and `register` functions on Registry contract are used to assign related addresses to defined indexes. `register` increments index and creates new spot. `setAddress` can be used to modify existing ones.
+
+By convention the addresses should be assigned like this:
+
+0 - multisig
+
+1 - 
+
+2 - Price Router
+
+3 - Cellar
+
+4 - Share Price Oracle
 
 Deploying the registry could be a part of [**a script**](https://github.com/PeggyJV/cellar-contracts/blob/zaki/PeggyJYDeployments/script/Arbitrum/peggyjv_production/SetupTestProductionInfra.s.sol) that deploys price router, registry and adaptors at once.
 

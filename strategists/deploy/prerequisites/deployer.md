@@ -8,4 +8,4 @@ dev0Address should be wallet address that the strategist has access to.
 
 Now we have everything we need to deploy the deployer. Next step would be running a deploy script. 
 
-[**Example script for deploying a deployer**](https://github.com/PeggyJV/cellar-contracts/blob/zaki/PeggyJYDeployments/script/Arbitrum/peggyjv_production/DeployDeployer.s.sol)
+[**Example script for deploying a deployer**](https://github.com/PeggyJV/cellar-contracts/blob/zaki/PeggyJYDeployments/script/Arbitrum/peggyjv_production/ExampleDeploy/DeployDeployer.s.sol)
