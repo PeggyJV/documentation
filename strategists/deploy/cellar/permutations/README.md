@@ -46,3 +46,10 @@ To determine which permutation to deploy, strategists should evaluate the specif
   This permutation extends the Balancer flash loan functionality by combining Oracle support, multi-asset deposits, and native asset (e.g., ETH) support. You can find the contract [here](https://github.com/PeggyJV/cellar-contracts/blob/zaki/PeggyJYDeployments/src/base/permutations/advanced/CellarWithOracleWithBalancerFlashLoansWithMultiAssetDepositWithNativeSupport.sol).
 
 The full list of available permutations and building blocks can be explored in the [`src/base/permutations` directory](https://github.com/PeggyJV/cellar-contracts/tree/zaki/PeggyJYDeployments/src/base/permutations). Each file is structured to make the functionality of each permutation clear, and comments are provided to guide you in understanding how the different modules interact.
+
+## Deploying with permutations 
+
+Some features that the permutations provide, need additional configuration when deploying the cellar. 
+Rather than repeating the same deploying script with minor changes, this doc just brings out the additional steps needed to deploy with different permutations.
+Use the **[Example Deployment script](https://github.com/PeggyJV/cellar-contracts/blob/zaki/PeggyJYDeployments/script/Arbitrum/peggyjv_production/ExampleDeploy/DeployExampleCellar.s.sol)**
+as the base and add additional permutation logic from the following docs.

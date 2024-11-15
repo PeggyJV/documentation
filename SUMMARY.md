@@ -43,7 +43,7 @@
 * [Requests](strategists/requests.md)
 * [Cellar Functions](strategists/cellar-functions.md)
 * [Adaptors](strategists/adaptors.md)
-* [Deploy](strategists/deploy/README.md)
+* [Deploying contracts](strategists/deploy/README.md)
   * [Prerequisites](strategists/deploy/prerequisites/README.md)
     * [Environment setup](strategists/deploy/prerequisites/env-setup.md)
     * [Deployer](strategists/deploy/prerequisites/deployer.md)
@@ -51,8 +51,13 @@
     * [Price Router](strategists/deploy/prerequisites/price-router.md)
     * [Adaptors](strategists/deploy/prerequisites/adaptors.md)
   * [Cellar](strategists/deploy/cellar/README.md)
-    * [Permutations](strategists/deploy/cellar/permutations.md)
-    * [Deploy](strategists/deploy/cellar/deploy.md)
+    * [Deploying cellar](strategists/deploy/cellar/deploy.md)
+    * [Permutations](strategists/deploy/cellar/permutations/README.md)
+      * [Flash Loans](strategists/deploy/cellar/permutations/flash-loans.md)
+      * [Multi Asset Deposit](strategists/deploy/cellar/permutations/multi-asset-deposit.md)
+      * [Native support](strategists/deploy/cellar/permutations/native-support.md)
+      * [Share Lock Period](strategists/deploy/cellar/permutations/share-lock-period.md)
+    
 
 ## Protocol
 
