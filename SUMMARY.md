@@ -56,7 +56,6 @@
       * [Flash Loans](strategists/deploy/cellar/permutations/flash-loans.md)
       * [Multi Asset Deposit](strategists/deploy/cellar/permutations/multi-asset-deposit.md)
       * [Native support](strategists/deploy/cellar/permutations/native-support.md)
-      * [Share Lock Period](strategists/deploy/cellar/permutations/share-lock-period.md)
     
 
 ## Protocol
